@@ -17,12 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
 
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
