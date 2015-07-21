@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 
-//= require "refills/paralax"
+//= require "refills/nav"
