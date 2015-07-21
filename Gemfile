@@ -26,13 +26,14 @@ group :test, :development do
   gem 'byebug'
   gem 'factory_girl_rails'
   gem 'forgery'
-  gem 'rspec-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'zonebie'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :test do
+  gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'launchy'
   gem 'database_cleaner'
