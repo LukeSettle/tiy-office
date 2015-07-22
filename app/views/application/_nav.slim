@@ -1,6 +1,6 @@
 header.centered-navigation[role="banner"]
   .centered-navigation-wrapper
-    a.mobile-logo[href="javascript:void(0)"]
+    a.mobile-logo[link_to root_path]
       img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image"]
     a#js-centered-navigation-mobile-menu.centered-navigation-mobile-menu[href="javascript:void(0)"]
       | MENU
@@ -9,47 +9,8 @@ header.centered-navigation[role="banner"]
         li.nav-link
           = link_to "Pictures", pictures_path(@pictures)
         li.nav-link
-          a[href="javascript:void(0)"]
-            | About Us
-        li.nav-link
-          a[href="javascript:void(0)"]
-            | Contact
+          = link_to "New Picture", new_picture_path
         li.nav-link.logo
           a.logo = link_to root_path
             img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image"]
-        li.nav-link
-          a[href="javascript:void(0)"]
-            | Testimonials
-        li.nav-link.more
-          a[href="javascript:void(0)"]
-            | More
-          ul.submenu
-            li
-              a[href="javascript:void(0)"]
-                | Submenu Item
-            li
-              a[href="javascript:void(0)"]
-                | Another Item
-            li.more
-              a[href="javascript:void(0)"]
-                | Item with submenu
-              ul.submenu
-                li
-                  a[href="javascript:void(0)"]
-                    | Sub-submenu Item
-                li
-                  a[href="javascript:void(0)"]
-                    | Another Item
-            li.more
-              a[href="javascript:void(0)"]
-                | Another submenu
-              ul.submenu
-                li
-                  a[href="javascript:void(0)"]
-                    | Sub-submenu
-                li
-                  a[href="javascript:void(0)"]
-                    | An Item
-        li.nav-link
-          a[href="javascript:void(0)"]
-            | Sign up
+       

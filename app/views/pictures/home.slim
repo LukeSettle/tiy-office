@@ -1,0 +1,8 @@
+.logo-header
+	img.home-pic src="http://images.fanpop.com/images/image_uploads/Dunder-Mifflin-Logo-the-office--28us-29-41129_1024_768.jpg"
+
+= render 'refills/griditems', urls: @urls
+
+.button-container
+	button.home-link
+		= link_to "Add to the awesomeness!", new_picture_path

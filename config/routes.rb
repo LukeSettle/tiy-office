@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-   root 'home#index'
+   root 'pictures#home'
    resources 'pictures'
 
   # Example of regular route:

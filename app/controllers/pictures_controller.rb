@@ -3,16 +3,23 @@ class PicturesController < ApplicationController
 		@pictures = Picture.all
 	end
 
+  def home
+    @urls = Picture.all.limit(6).pluck(:url)
+  end
+
   def show
   	@picture = Picture.find(params[:id])
   end
 
+  def new
+    @picture = Picture.new
+  end
+
   def create
-  @picture = picture.new(picture_params)
- 
-  @picture.save
-  redirect_to @picture
-end
+    @picture = Picture.new(picture_params)
+    @picture.save
+    redirect_to picture_path(@picture)
+  end
  
 private
   def picture_params

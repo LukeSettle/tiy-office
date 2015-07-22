@@ -1,8 +1,12 @@
 .grid-items
-  a.grid-item[href="https://www.youtube.com/results?search_query=the+office"]
-    img[src="https://throughtwoblueeyes.files.wordpress.com/2013/03/funnyquotetheofficewordsquotes-ed984edd02c9731dcd498861c9d39b97_h1.jpg?w=676" alt=""]
-  a.grid-item.grid-item-big.grid-item-image[href="javascript:void(0)"]
-    img[src="https://s-media-cache-ak0.pinimg.com/originals/7b/46/9e/7b469eaae53e5d6a023c315a767c8d8f.gif" alt=""]
-  a.grid-item.grid-item-big.grid-item-image[href="javascript:void(0)"]
-    img[src="https://s-media-cache-ak0.pinimg.com/736x/89/ae/3e/89ae3e17b7d6aa85d0583433d88b009d.jpg" alt=""]
-  
+ 	a.grid-item.grid-item-image[href="https://www.youtube.com/results?search_query=the+office"]
+    	img[src=urls[0] alt=""]
+
+	- urls[1..2].each do |url|
+	 	 	a.grid-item.grid-item-big.grid-item-image[href="https://www.	youtube.com/results?search_query=the+office"]
+	    		img[src=url alt=""]
+	- urls[3..4].each do |url|
+ 			a.grid-item.grid-item-image[href="https://www.youtube.com/results?search_query=the+office"]
+    			img[src=url alt=""]
+  	a.grid-item.grid-item-big.grid-item-image[href="https://www.youtube.com/results?search_query=the+office"]
+    		img[src=urls[5] alt=""]
