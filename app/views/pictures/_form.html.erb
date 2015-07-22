@@ -1,4 +1,8 @@
-<%= form_for @picture do |f| %>
+<%= form_for @picture do |f| %> 
+  <p> 
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  <p>
   <p> 
     <%= f.label :url %><br>
     <%= f.text_field :url %>
