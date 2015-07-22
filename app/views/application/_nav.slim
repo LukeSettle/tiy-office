@@ -7,8 +7,7 @@ header.centered-navigation[role="banner"]
     nav[role="navigation"]
       ul#js-centered-navigation-menu.centered-navigation-menu.show
         li.nav-link
-          a[href="javascript:void(0)"]
-            | Products
+          = link_to "Pictures", pictures_path(@pictures)
         li.nav-link
           a[href="javascript:void(0)"]
             | About Us
@@ -16,7 +15,7 @@ header.centered-navigation[role="banner"]
           a[href="javascript:void(0)"]
             | Contact
         li.nav-link.logo
-          a.logo[href="javascript:void(0)"]
+          a.logo = link_to root_path
             img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image"]
         li.nav-link
           a[href="javascript:void(0)"]

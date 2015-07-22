@@ -1,4 +1,20 @@
 .picture{
-	display: block;
+	border: solid black 5px;
+}
+
+p.pic-title{
 	text-align: center;
+	font-size: 5em;
+}
+
+p.pic-description{
+	text-align: center;
+	width: 5em;
+	display: block;
+	margin: 0px auto;
+}
+
+button.home-link{
+	color:white;
+	background: black;
 }
