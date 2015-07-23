@@ -1,14 +1,15 @@
 - @pictures.each do |pic|
 	.picture
 		p.pic-title
-			== pic.title
+			= pic.title
 		= link_to image_tag(src=pic.url), picture_path(pic) 
 
 		p.pic-author
 			|author -
-			== pic.author
+			- if pic.author
+				= pic.author.name
 		p.pic-description
-			== pic.description
+			= pic.description
 .home-button
 	button.home-link
 		= link_to "Home", root_path

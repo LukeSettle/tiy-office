@@ -1,10 +1,10 @@
 p.pic-title
-	== @picture.title
+	= @picture.title
 img	src=@picture.url
 	= link_to "Edit", edit_picture_path(@picture)
 	= link_to "Delete", picture_path(@picture), method: :delete
 p.pic-author
 	|author -
-	== @picture.author
+	= @picture.author.name
 p.pic-description
-	== @picture.description
+	= @picture.description

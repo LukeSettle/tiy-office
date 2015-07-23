@@ -1,16 +1,16 @@
 header.centered-navigation[role="banner"]
   .centered-navigation-wrapper
-    a.mobile-logo[link_to root_path]
-      img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image"]
+    = link_to image_tag("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"), root_path, class: "mobile-logo"
     a#js-centered-navigation-mobile-menu.centered-navigation-mobile-menu[href="javascript:void(0)"]
       | MENU
     nav[role="navigation"]
       ul#js-centered-navigation-menu.centered-navigation-menu.show
         li.nav-link
-          = link_to "Pictures", pictures_path(@pictures)
+          = link_to "Pictures", pictures_path
         li.nav-link
           = link_to "New Picture", new_picture_path
         li.nav-link.logo
           a.logo = link_to root_path
             img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image"]
        
+            

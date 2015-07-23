@@ -1,6 +1,9 @@
-= simple_form_for @picture do |f|
-  = f.input :author
-  = f.input :url
-  = f.input :title
-  = f.input :description, as: :text
+= form_for @picture do |f|
+  = f.select(:author_id, options_for_select(Author.all.pluck(:name, :id)))
+  = f.label :url
+  = f.text_field :url
+  = f.label :title
+  = f.text_field :title
+  = f.label :description
+  = f.text_area :description, as: :text
   = f.button :submit
