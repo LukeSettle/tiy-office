@@ -1,7 +1,22 @@
+require 'byebug'
 class PicturesController < ApplicationController
 	def index
 		@pictures = Picture.all
 	end
+
+  def up
+    @picture = Picture.find(params[:picture_id])
+    @picture.score += 1
+    @picture.save!
+    redirect_to pictures_path
+  end
+
+  def down
+    @picture = Picture.find(params[:picture_id])
+    @picture.score += -1
+    @picture.save
+    redirect_to pictures_path
+  end
 
   def home
     @urls = Picture.all.limit(6).pluck(:url)
@@ -44,6 +59,6 @@ class PicturesController < ApplicationController
 
 private
   def picture_params
-    params.require(:picture).permit(:url, :title, :description, :author_id)
+    params.require(:picture).permit(:url, :title, :description, :author_id, :score)
   end
 end

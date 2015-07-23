@@ -10,6 +10,11 @@
 				= pic.author.name
 		p.pic-description
 			= pic.description
+		p.picture-score = pic.score
+		button.up-vote
+			= link_to "Up Vote", picture_up_path(pic.id), method: :put
+		button.down-vote
+			= link_to "Down vote", picture_down_path(pic.id), method: :put
 .home-button
 	button.home-link
 		= link_to "Home", root_path

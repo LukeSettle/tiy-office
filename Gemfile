@@ -18,6 +18,7 @@ gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
+gem 'faker'
 
 group :production do
   gem 'rails_12factor'
