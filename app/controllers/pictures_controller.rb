@@ -1,4 +1,3 @@
-require 'byebug'
 class PicturesController < ApplicationController
 	def index
 		@pictures = Picture.all.sort_by do |pic|
