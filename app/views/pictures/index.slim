@@ -2,7 +2,8 @@
 	.picture
 		p.pic-title
 			== pic.title
-		img src=pic.url
+		= link_to image_tag(src=pic.url), picture_path(pic) 
+
 		p.pic-author
 			|author -
 			== pic.author
