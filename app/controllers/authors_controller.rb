@@ -14,7 +14,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     @author.save
-    redirect_to author_path(@author)
+    redirect_to new_picture_path
   end
 
   def destroy

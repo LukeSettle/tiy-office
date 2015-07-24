@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'byebug'
 RSpec.describe PicturesController, type: :controller do
 	let (:picture) {FactoryGirl.create(:picture)}
   describe "GET #index" do
