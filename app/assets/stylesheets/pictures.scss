@@ -31,3 +31,21 @@ button.home-link{
 .home-button{
 	margin: 5px;
 }
+.voting-container{
+	float: right;
+	position: relative;
+	bottom: 15em;
+}
+
+.voting{
+	display: block;
+	margin: 5px;
+}
+.up-vote{
+	text-align: center;
+	margin:5px;
+}
+.down-vote{
+	text-align: center;
+	margin: 5px;
+}
