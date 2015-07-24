@@ -1,6 +1,6 @@
 - @pictures.each do |pic|
 	.hover-tile-outer style="background: url('#{pic.url}');
-	background-repeat: no-repeat; background-size:cover;" = link_to picture_path(pic.id)
+	background-repeat: no-repeat; background-size:contain;" = link_to picture_path(pic.id)
 		.hover-tile-container
 			.hover-tile.hover-tile-visible
 			.hover-tile.hover-tile-hidden
