@@ -1,22 +1,5 @@
-- @pictures.each do |pic|
-	.picture
-		p.pic-title
-			= pic.title
-		= link_to image_tag(src=pic.url), picture_path(pic) 
+= render 'refills/hovertile'
 
-		p.pic-author
-			|author -
-			- if pic.author
-				= pic.author.name
-		p.pic-description
-			= pic.description
-		.voting-container
-				p.picture-score
-					= pic.score
-				.up-vote
-					= button_to "Up Vote", picture_up_path(pic.id), method: :put
-				.down-vote
-					= button_to "Down vote", picture_down_path(pic.id), method: :put
 .home-button
 	button.home-link
 		= link_to "Home", root_path
