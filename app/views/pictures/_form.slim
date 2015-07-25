@@ -1,9 +1,10 @@
-= simple_form_for @picture do |f|
-  = f.association :author
-  | Name not here? Click to become an author!
-  p
-  	= link_to "New Author", new_author_path
-  = f.input :url
-  = f.input :title
-  = f.input :description, as: :text
-  = f.button :submit
+.form-container
+	= simple_form_for @picture do |f|
+	  = f.association :author
+	  | Name not here? Click to become an author!
+	  p
+	  	= link_to "New Author", new_author_path
+	  = f.input :url
+	  = f.input :title
+	  = f.input :description, as: :text
+	  = f.button :submit

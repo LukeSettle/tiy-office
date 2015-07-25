@@ -6,10 +6,14 @@
 				h4
 				  = pic.title
 				p.picture-score
-						= pic.score
+					| Votes : 
+					= pic.score
 				.up-vote
 					= button_to "Up Vote", picture_up_path(pic.id), 	method: :put
 				.down-vote
 					= button_to "Down vote", picture_down_path(pic.id), method: :put
 				p
 				  = pic.description
+				p.author-name
+					| Author ~
+					= pic.author.name
