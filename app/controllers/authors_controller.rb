@@ -5,6 +5,10 @@ class AuthorsController < ApplicationController
 
   def show
   	@author = Author.find(params[:id])
+
+    @authorpics = @author.pictures.sort_by do |pic|
+      -pic[:score]
+    end
   end
 
   def new
