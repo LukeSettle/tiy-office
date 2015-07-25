@@ -11,6 +11,26 @@ class AuthorsController < ApplicationController
     end
   end
 
+  def up
+    @picture = Picture.find(params[:picture_id])
+    @picture.score += 1
+    if @picture.save
+      redirect_to pictures_path
+    else
+      puts "ERROR: Your vote was not counted"
+    end
+  end
+
+  def down
+    @picture = Picture.find(params[:picture_id])
+    @picture.score += -1
+    if @picture.save
+      redirect_to show_path
+    else
+      puts "ERROR: Your vote was not counted"
+    end
+  end
+
   def new
     @author = Author.new
   end
