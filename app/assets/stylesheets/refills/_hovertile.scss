@@ -4,11 +4,12 @@
   $medium-screen: em(640) !default;
   $hover-tile-height: 300px;
   $base-spacing: 1.5em;
-  width: 400px;
-  height: 300px;
-  display: block;
+
   margin: 0px auto;
-  
+  position: relative;
+  top: 0;
+  left: 0;
+
   @include media($medium-screen) {
     width: 40%;
   }
