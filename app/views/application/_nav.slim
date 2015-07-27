@@ -14,4 +14,7 @@ header.centered-navigation[role="banner"]
             img[src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image"]
         li.nav-link
           = link_to "Authors", authors_path
-            
+        - if current_user
+          li.nav-link = link_to "Login", new_user_session_path
+          else
+            li.nav-link.button = link_to "Sign Up", new_user_registration_path

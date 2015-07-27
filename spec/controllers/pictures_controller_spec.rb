@@ -37,4 +37,12 @@ RSpec.describe PicturesController do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe "POST #update" do 
+    it "changes a previous post" do
+      post :update, id: picture.id, picture: {title: "Luke"}
+      picture.reload
+      expect(picture.title).to eq("Luke")
+    end
+  end
 end
