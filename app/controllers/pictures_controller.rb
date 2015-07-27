@@ -26,7 +26,13 @@ class PicturesController < ApplicationController
   end
 
   def home
-    @urls = Picture.all.limit(6).pluck(:url)
+    @pictures = Picture.all.sort_by do |pic|
+      -pic[:score]
+    end
+    @urls = []
+    @pictures.each do |pic|
+      @urls << pic.url
+    end
   end
 
   def show
