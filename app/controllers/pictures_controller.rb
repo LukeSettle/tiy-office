@@ -1,14 +1,11 @@
 class PicturesController < ApplicationController
 	def index
-		@pictures = Picture.all.sort_by do |pic|
-      -pic[:score]
-    end
+		@pictures = Picture.all
 	end
 
   def up
     @picture = Picture.find(params[:picture_id])
-    @picture.score += 1
-    if @picture.save
+    if @picture.vote 1
       redirect_to pictures_path
     else
       puts "ERROR: Your vote was not counted"
@@ -17,8 +14,7 @@ class PicturesController < ApplicationController
 
   def down
     @picture = Picture.find(params[:picture_id])
-    @picture.score += -1
-    if @picture.save
+    if @picture.vote -1
       redirect_to pictures_path
     else
       puts "ERROR: Your vote was not counted"
@@ -26,9 +22,7 @@ class PicturesController < ApplicationController
   end
 
   def home
-    @pictures = Picture.all.sort_by do |pic|
-      -pic[:score]
-    end
+    @pictures = Picture.all
     @urls = []
     @pictures.each do |pic|
       @urls << pic.url

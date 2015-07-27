@@ -6,9 +6,9 @@ default: &default
 
 development:
   <<: *default
-  database: better-than-most_development
+  database: tiy-office-development
 
 
 test:
   <<: *default
-  database: better-than-most_test
+  database: tiy-office-teste
