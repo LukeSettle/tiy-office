@@ -1,7 +1,7 @@
 .form-container
 	= simple_form_for @picture do |f|
-	  = f.association :author
-	  = link_to "Name not here? Click to become an author!", new_author_path
+	  = f.association :user
+	  = link_to "Name not here? Click to become a user!", new_user_registration_path
 	  = f.input :url
 	  = f.input :title
 	  = f.input :description, as: :text

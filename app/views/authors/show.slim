@@ -1,4 +1,4 @@
-- @authorpics.each do |pic|
+- @userpics.each do |pic|
 	.hover-tile-outer style="background-image:url(#{pic.url}); background-repeat:no-repeat; background-size: 100% 100%;"
 		.hover-tile-container
 			.hover-tile.hover-tile-visible
@@ -16,4 +16,4 @@
 				  = pic.description
 				p.author-name
 					| Author ~
-					= pic.author.name
+					= pic.user.email

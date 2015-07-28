@@ -6,6 +6,6 @@ img	src=@picture.url
 	= link_to "Delete", picture_path(@picture), method: :delete
 p.pic-author
 	|author -
-	= @picture.author.name
+	= @picture.user.email
 p.pic-description
 	= @picture.description

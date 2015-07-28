@@ -1,14 +1,13 @@
 class AuthorsController < ApplicationController
 	def index
 		@authors = Author.all
+    @users = User.all
 	end
 
   def show
   	@author = Author.find(params[:id])
-
-    @authorpics = @author.pictures.sort_by do |pic|
-      -pic[:score]
-    end
+    @user = User.find(params[:id])
+    @userpics = @user.pictures
   end
 
   def up

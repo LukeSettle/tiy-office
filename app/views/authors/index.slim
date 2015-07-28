@@ -1,4 +1,4 @@
 .authors-container
-	- @authors.each do |author|
+	- @users.each do |user|
 		p
-			= link_to "Click to see #{author.name}'s pictures! They have #{author.pictures.count} pictures", author_path(author.id)
+			= link_to "Click to see #{user.email}'s pictures! They have #{user.pictures.count} pictures", author_path(user.id)
