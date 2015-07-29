@@ -4,8 +4,5 @@ img	src=@picture.url
 - if signed_in? && current_user.admin?
 	= link_to "Edit", edit_picture_path(@picture)
 	= link_to "Delete", picture_path(@picture), method: :delete
-p.pic-author
-	|author -
-	= @picture.user.email
 p.pic-description
 	= @picture.description
