@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   	put :up
   	put :down
   end
+  resources :payments
   get 'admin/view' => 'admin#view'
   resources 'authors'
   # Example of regular route:

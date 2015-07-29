@@ -19,6 +19,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'simplecov', :require => false, :group => :test
 gem 'slim-rails'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
