@@ -1,3 +1,10 @@
-p.info{
+.info{
 	text-align: center;
+}
+p.info-italic{
+	text-align: center;
+	font-style: italic;
+}
+.top{
+	bottom-border: solid 3px #333;
 }

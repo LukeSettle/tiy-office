@@ -1,15 +1,14 @@
-h1 Update Users
-- @users.each do |user|
-	h1 = user.email
-	p = link_to "edit", edit_user_registration_path(user.id)
-	p = link_to "delete", cancel_user_registration_path(user.id)
-h1 Update Pictures
+h1.info Update Users
+.info.top
+	- @users.each do |user|
+		h3 = user.email
+		p = link_to "edit", edit_user_registration_path(user.id)
+		p = link_to "delete", cancel_user_registration_path(user.id)
+h1.info Update Pictures
 - @pictures.each do |pic|
 	img src=pic.url
 	p.info = pic.title
 	p.info = pic.description
+	p.info-italic = pic.user.email
 	p.info = link_to "Edit", edit_picture_path(pic.id)
 	p.info = link_to "Delete", picture_path(pic.id), method: :delete
-h1 Monitor Admin
-- @users.each do |user|
-	p.info = user

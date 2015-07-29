@@ -8,6 +8,13 @@ RSpec.describe PicturesController do
     end
   end
 
+  describe "GET #new" do
+    it "returns http success" do
+      get :new
+      expect(response).to have_http_status(:success)
+    end
+  end
+
   describe "PUT #up" do
   	it "adds 1 to score" do
   		put :up, picture_id: picture.id

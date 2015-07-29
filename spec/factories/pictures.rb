@@ -3,6 +3,6 @@ FactoryGirl.define do
     title { Faker::Company.name }
     description { Faker::Lorem.sentence }
 		url { Faker::Internet.url }
-		author
+		user
   end
 end
