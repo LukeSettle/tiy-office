@@ -14,7 +14,4 @@
 					= button_to "Down vote", picture_down_path(pic.id), method: :put
 				p
 				  = pic.description
-				p.author-name
-					| Author ~
-					= pic.user.email
 				= link_to "Click to see picture", picture_path(pic.id)
