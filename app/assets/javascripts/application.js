@@ -14,3 +14,5 @@
 //= require jquery_ujs
 
 //= require "refills/nav"
+
+//= require "pictures"
