@@ -1,6 +1,5 @@
 .form-container
 	= simple_form_for @picture do |f|
-	  = f.association :user, collection: User.all, include_blank: false, label_method: :email
 	  = f.input :url
 	  = f.input :title
 	  = f.input :description, as: :text

@@ -1,1 +1,0 @@
-FactoryGirl.create_list(:picture, 5)
